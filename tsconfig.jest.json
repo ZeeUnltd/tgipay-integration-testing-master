@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",  // Extend the main config
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "commonjs",         // Jest uses CommonJS modules
+    "jsx": "react-jsx",               // For React JSX if needed in tests
+    "types": ["jest", "@testing-library/jest-dom"],  // Include Jest and Testing Library types
+    "isolatedModules": false      // Allow running Jest tests that require imports across modules
+  },
+  "include": [
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx"
+  ]
+}
